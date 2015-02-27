@@ -708,7 +708,7 @@ module.exports = biojsvisrohartmsctest = function(init_options)
 
 
         tooltip = options.tooltip;
-        svg.call(tooltip);
+        //svg.call(tooltip);
 
         svg.selectAll(".dot") // class of .dot
           .data(options.data) // use the options.data and connect it to the elements that have .dot css

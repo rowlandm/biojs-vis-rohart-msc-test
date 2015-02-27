@@ -17,7 +17,7 @@ var app = require("biojs-vis-rohart-msc-test");
         return temp; 
       });
 
-    data_url= './dataset6037.rohart.MSC.txt';
+    data_url= './dataset6037.rohart.MSC.tsv';
     d3.tsv(data_url,function (error,data){
         
         count = 0; 
@@ -32,7 +32,7 @@ var app = require("biojs-vis-rohart-msc-test");
 
         title = "Rohart MSC Score for Dataset XYZ";
         subtitle = "Subtitle"
-        target = "#graph";
+        target = rootDiv;
 
         // can always use just a straight value, but it's nicer when you calculate
         // based off the number of samples that you have
