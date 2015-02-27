@@ -39,7 +39,12 @@
 		"prunner": "1.x"
   }, 
   "sniper": {
-    "js": [ "/build/test.js"],
+    "js": [ 
+        "/build/test.js",
+        "https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js",
+        "https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.6.3/d3-tip.min.js",
+        "https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"
+    ],
     "snippets": ["examples"],
     "first": "simple"
    }, 

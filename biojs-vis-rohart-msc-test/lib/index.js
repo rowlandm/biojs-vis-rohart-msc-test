@@ -325,7 +325,7 @@ module.exports = biojsvisrohartmsctest = function(init_options)
     this.setup_data_for_x_axis = function(graph){
         options = graph.options;
     
-        sample_type_order = dataset_metadata[ds_id].sample_type_order.split(',');
+        sample_type_order = options.sample_type_order.split(',');
         nested_values = d3.nest()
             .key(function(d){ return d.Sample_Type })
             .sortKeys(function(a,b){return sample_type_order.indexOf(a) - sample_type_order.indexOf(b);})
@@ -363,7 +363,7 @@ module.exports = biojsvisrohartmsctest = function(init_options)
 
     this.setup_x_axis = function (graph){
         // ########################################## Setup X axis labels ###################################3
-
+        page_options = graph.page_options;
         svg = graph.svg;
         options = graph.options;
         sample_id_list = graph.sample_id_list;
@@ -403,7 +403,7 @@ module.exports = biojsvisrohartmsctest = function(init_options)
         font_size = "0px"; // set this to 0 if you don't want sample_id as the labels on the x axis
         svg.append("g")
             .attr("class", "x axis")
-            .attr("transform", "translate(0," + this.page_options.height + ")")
+            .attr("transform", "translate(0," + page_options.height + ")")
             .call(xAxis)// this is actually implementing the xAxis as an axis itself
         .selectAll("text")  // text for the xaxes - remember they are on a slant 
             .attr("dx", "-2em") // when rotating the text and the size
@@ -415,7 +415,7 @@ module.exports = biojsvisrohartmsctest = function(init_options)
                 })
         .append("text") // main x axis title
             .attr("class", "label")
-            .attr("x", this.page_options.width)
+            .attr("x", page_options.width)
             .attr("y", +24)
             .style("text-anchor", "end")
             .text(options.x_axis_title);

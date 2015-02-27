@@ -17,8 +17,7 @@ var app = require("biojs-vis-rohart-msc-test");
         return temp; 
       });
 
-    //data columns are state,type,component1,component2 tab separated
-    data_url= 'http://www.stemformatics.org/msc_signature/get_msc_signature_values?ds_id=6037'
+    data_url= './dataset6037.rohart.MSC.txt';
     d3.tsv(data_url,function (error,data){
         
         count = 0; 
@@ -53,6 +52,7 @@ var app = require("biojs-vis-rohart-msc-test");
             horizontal_line_value_column: 'value',
             show_horizontal_line_labels: true,
             legend_class: "legend",
+            sample_type_order: "BM MSC,BM erythropoietic cells CD235A+,BM granulopoietic cells CD11B+,BM hematopoietic cells CD45+,Developing cortex neural progenitor cells,Ventral midbrain neural progenitor cells,Olfactory lamina propria derived stem cells",
             height: 1020,
             error_bar_width:10, 
             x_axis_text_angle:-45, 
@@ -66,7 +66,7 @@ var app = require("biojs-vis-rohart-msc-test");
             data: data
         }
 
-        var instance = new app({el: rootDiv, text: 'biojs'});
+        var instance = new app(options);
  
 
     }); 
