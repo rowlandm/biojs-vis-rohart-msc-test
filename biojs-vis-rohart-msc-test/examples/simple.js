@@ -62,6 +62,7 @@ var app = require("biojs-vis-rohart-msc-test");
             title_class: "title",
             x_axis_title: "Samples",
             y_axis_title: "Rohart Score",
+            watermark:"http://www1.stemformatics.org/img/logo.gif",
             tooltip: tooltip, // using d3-tips
             data: data
         }

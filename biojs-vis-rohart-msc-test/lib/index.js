@@ -708,7 +708,7 @@ module.exports = biojsvisrohartmsctest = function(init_options)
 
 
         tooltip = options.tooltip;
-        //svg.call(tooltip);
+        svg.call(tooltip);
 
         svg.selectAll(".dot") // class of .dot
           .data(options.data) // use the options.data and connect it to the elements that have .dot css
@@ -977,7 +977,7 @@ module.exports = biojsvisrohartmsctest = function(init_options)
         options = graph.options;
 
         svg.append("image")
-            .attr("xlink:href","/img/logo.gif")
+            .attr("xlink:href",options.watermark)
             .attr("x", 70)
             .attr("y", -(graph.full_width - options.margin.left)) // just out of the graphs edge
             .attr("transform", "rotate(+90)")
