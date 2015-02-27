@@ -17,7 +17,7 @@ var app = require("biojs-vis-rohart-msc-test");
         return temp; 
       });
 
-    data_url= './dataset6037.rohart.MSC.tsv';
+    data_url= '../dataset6037.rohart.MSC.tsv';
     d3.tsv(data_url,function (error,data){
         
         count = 0; 
