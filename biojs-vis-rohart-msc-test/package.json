@@ -1,0 +1,47 @@
+{
+  "name": "biojs-vis-rohart-msc-test",
+  "description": "BioJS component to provide a graph of the Rohart MSC Test hosted in Stemformatics",
+  "version": "0.1.0",
+  "homepage": "https://github.com/rowlandm/biojs-vis-rohart-msc-test",
+  "author": {
+    "name": "rowlandm",
+    "email": "rowland.mosbergen@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/rowlandm/biojs-vis-rohart-msc-test.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rowlandm/biojs-vis-rohart-msc-test/issues"
+  },
+  "licenses": [
+    {
+      "type": "Apache 2",
+      "url": "https://github.com/rowlandm/biojs-vis-rohart-msc-test/blob/master/LICENSE"
+    }
+  ],
+  "main": "lib/index.js",
+  "scripts": {
+		"test": "echo 'Error: no test specified' && exit 1",
+		"build": "mkdirp build && browserify -r ./:biojs-vis-rohart-msc-test -o build/test.js",
+		"build-browser": "npm run build",
+		"install": "npm run build",
+		"watch": "watchify -r ./:biojs-vis-rohart-msc-test -v -o build/test.js",
+		"w": "prunner \"npm run sniper\" \"npm run watch\"",
+		"sniper": "sniper ."
+  },
+  "dependencies": {},
+  "devDependencies": {
+		"mkdirp": "^0.5.0",
+		"browserify": "6.x",
+		"sniper": "0.x",
+		"watchify": "^1.0.6",
+		"prunner": "1.x"
+  }, 
+  "sniper": {
+    "js": [ "/build/test.js"],
+    "snippets": ["examples"],
+    "first": "simple"
+   }, 
+  "keywords": ["d3","graph","stemformatics","biojs","biojs"]
+}
