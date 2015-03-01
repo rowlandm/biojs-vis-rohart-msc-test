@@ -49,5 +49,5 @@
     "snippets": ["examples"],
     "first": "simple"
    }, 
-  "keywords": ["d3","graph","stemformatics","biojs","biojs"]
+  "keywords": ["d3","graph","stemformatics","biojs","Rohart","MSC","Rohart score"]
 }
