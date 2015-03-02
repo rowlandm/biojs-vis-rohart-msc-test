@@ -716,14 +716,16 @@ module.exports = biojsvisrohartmsctest = function(init_options)
         // http://stackoverflow.com/questions/17671252/d3-create-a-continous-color-scale-with-many-strings-inputs-for-the-range-and-dy
         // pick any number [3-9] for Reds
         // pick any number [3-11] for RdGy
+        // you can check the number you can use here: https://github.com/mbostock/d3/blob/master/lib/colorbrewer/colorbrewer.js
         var numColors = 9;
 
         var heatmapColour = d3.scale.quantize()
           .domain([0,200])
             // this is the range for the Reds colorbrewer, bu there is also RdGy etc.
             // you can see them all here: https://github.com/mbostock/d3/blob/master/lib/colorbrewer/colorbrewer.js
-          .range(colorbrewer.Reds[numColors]);
-          .range(colorbrewer.Reds[numColors]);
+          //.range(colorbrewer.Reds[numColors]);
+          //.range(colorbrewer.RdGy[numColors]);
+          .range(colorbrewer.RdPu[numColors]);
 
 
         svg.selectAll(".dot") // class of .dot
