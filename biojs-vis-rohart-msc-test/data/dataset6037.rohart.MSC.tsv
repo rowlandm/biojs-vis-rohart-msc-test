@@ -1,4 +1,4 @@
-total_samples	MSC_Call	MSC_Type	Replicate_Group_ID	Sample_Type	chip_id	classification	prediction	lwr	upr	missing_signature_genes
+total_subsamplings	MSC_calls	MSC_Type	Replicate_Group_ID	Sample_Type	chip_id	classification	prediction	lwr	upr	missing_signature_genes
 200	126	MSC	BM MSC, donor 1	BM MSC	GSM250019	1	0.6008568272	0.5721704574	0.6339365135	0
 200	41	Non-MSC	BM MSC, donor 2	BM MSC	GSM250020	2	0.1953958583	0.1340766893	0.25571102	0
 200	129	MSC	BM MSC, donor 3	BM MSC	GSM250021	1	0.6154597539	0.5855621437	0.6489175336	0

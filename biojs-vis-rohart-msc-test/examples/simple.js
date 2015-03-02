@@ -15,7 +15,7 @@ var app = require("biojs-vis-rohart-msc-test");
         // 95% CI [0.66,0.71] 
         // MSC 100/100
         total = d.total_samples;
-        msc_call = d.MSC_Call; 
+        msc_call = d.MSC_calls; 
         temp = "Sample: " + d.Replicate_Group_ID +"("+d.chip_id+")<br/>MSC "+msc_call+"/"+total+"<br/>Prediction value: " + d[y_column] + "<br/>lwr: " + d.lwr + "<br/>upr: " + d.upr;
         return temp; 
       });
@@ -56,6 +56,7 @@ var app = require("biojs-vis-rohart-msc-test");
             domain_colours : ["pink","red"],
             legend_range: [0,200],
             legend_values: legend_values,
+            data_column_for_colour: "MSC_calls", //d.MSC_calls
             legend_class: "legend",
             sample_type_order: "BM MSC,BM erythropoietic cells CD235A+,BM granulopoietic cells CD11B+,BM hematopoietic cells CD45+,Developing cortex neural progenitor cells,Ventral midbrain neural progenitor cells,Olfactory lamina propria derived stem cells",
             height: 1020,
@@ -63,7 +64,7 @@ var app = require("biojs-vis-rohart-msc-test");
             x_axis_text_angle:-45, 
             width:width, // suggest 50 per sample
             x_column:'Replicate_Group_ID',
-            y_column:'prediction',
+            y_column:'prediction', // d.prediction
             title_class: "title",
             x_axis_title: "Samples",
             y_axis_title: "Rohart Score",
