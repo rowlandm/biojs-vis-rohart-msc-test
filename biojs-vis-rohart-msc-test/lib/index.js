@@ -711,7 +711,7 @@ module.exports = biojsvisrohartmsctest = function(init_options)
         svg.call(tooltip);
 
 
-        // Trying to make a quantative scale
+        // Trying to make a quantative scale using an old way - ended up not using this
         // https://github.com/mbostock/d3/wiki/Quantitative-Scales#quantize
         // http://stackoverflow.com/questions/17671252/d3-create-a-continous-color-scale-with-many-strings-inputs-for-the-range-and-dy
         // pick any number [3-9] for Reds
@@ -726,12 +726,8 @@ module.exports = biojsvisrohartmsctest = function(init_options)
         var numColors = 9;
 
         var heatmapColour = d3.scale.linear()
-            .domain([0,100,200]) 
-            // this is the range for the Reds colorbrewer, bu there is also RdGy etc.
-            // you can see them all here: https://github.com/mbostock/d3/blob/master/lib/colorbrewer/colorbrewer.js
-            .range(["green","pink","red"]);
-            //.range(colorbrewer.RdGy[numColors]);
-            //.range(colorbrewer.RdPu[numColors]);
+            .domain([0,200]) 
+            .range(["pink","red"]);
             
 
         svg.selectAll(".dot") // class of .dot
