@@ -14,7 +14,7 @@ var app = require("biojs-vis-rohart-msc-test");
         // 2 decimal places on the display only
         // 95% CI [0.66,0.71] 
         // MSC 100/100
-        total = d.total_samples;
+        total = d.total_subsamplings;
         msc_call = d.MSC_calls; 
         temp = "Sample: " + d.Replicate_Group_ID +"("+d.chip_id+")<br/>MSC "+msc_call+"/"+total+"<br/>Prediction value: " + d[y_column] + "<br/>lwr: " + d.lwr + "<br/>upr: " + d.upr;
         return temp; 
