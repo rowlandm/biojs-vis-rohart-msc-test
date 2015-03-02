@@ -1,26 +1,26 @@
-MSC_Type	Replicate_Group_ID	Sample_Type	chip_id	classification	prediction	lwr	upr	missing_signature_genes
-MSC	BM MSC, donor 1	BM MSC	GSM250019	1	0.600856827182859	0.572170457367557	0.633936513463107	0
-Non-MSC	BM MSC, donor 2	BM MSC	GSM250020	2	0.195395858322351	0.134076689319985	0.255711020002719	0
-MSC	BM MSC, donor 3	BM MSC	GSM250021	1	0.615459753851665	0.585562143735879	0.648917533579191	0
-Non-MSC	BM erythropoietic cells CD235A+, donor 1	BM erythropoietic cells CD235A+	GSM250022	2	0.0024744241163831	-0.027907186787775	0.0228126665844507	0
-Non-MSC	BM erythropoietic cells CD235A+, donor 2	BM erythropoietic cells CD235A+	GSM250023	2	-0.0272159124370074	-0.0528487662462533	-0.00824896692507485	0
-Non-MSC	BM erythropoietic cells CD235A+, donor 3	BM erythropoietic cells CD235A+	GSM250024	2	-0.173704632563746	-0.209354211086638	-0.144157668395836	0
-Non-MSC	BM granulopoietic cells CD11B+, donor 1	BM granulopoietic cells CD11B+	GSM250025	2	0.055291351514157	0.0204344703102805	0.0972177280408137	0
-Non-MSC	BM granulopoietic cells CD11B+, donor 2	BM granulopoietic cells CD11B+	GSM250026	2	-0.00964333322147842	-0.0393256000966129	0.0235368317369856	0
-Non-MSC	BM granulopoietic cells CD11B+, donor 3	BM granulopoietic cells CD11B+	GSM250027	2	0.00389214125181131	-0.0411861481047381	0.0507806545954915	0
-Non-MSC	BM hematopoietic cells CD45+, donor 1	BM hematopoietic cells CD45+	GSM250028	2	-0.0595867291261218	-0.0922188551421025	-0.0263467934586311	0
-Non-MSC	BM hematopoietic cells CD45+, donor 2	BM hematopoietic cells CD45+	GSM250029	2	-0.0279546395105703	-0.0509223657769214	0.000561992349002956	0
-Non-MSC	BM hematopoietic cells CD45+, donor 3	BM hematopoietic cells CD45+	GSM250030	2	-0.0592949996719657	-0.0865139917496139	-0.030119701719694	0
-Non-MSC	Developing cortex derived neural progenitor cells, replicate 1	Developing cortex neural progenitor cells	GSM335938	2	-0.557450060286944	-0.609589220023941	-0.51986098663744	0
-Non-MSC	Ventral midbrain derived neural progenitor cells, replicate 1	Ventral midbrain neural progenitor cells	GSM335940	2	-0.614153888294293	-0.670694376145711	-0.577010604901102	0
-Non-MSC	Developing cortex derived neural progenitor cells, replicate 2	Developing cortex neural progenitor cells	GSM335941	2	-0.492898463220494	-0.548728717644806	-0.454491156586065	0
-Non-MSC	Ventral midbrain derived neural progenitor cells, replicate 2	Ventral midbrain neural progenitor cells	GSM335942	2	-0.591883487299	-0.649369987905623	-0.550637949682265	0
-Unsure	Olfactory lamina propria derived stem cells, donor 1	Olfactory lamina propria derived stem cells	GSM606419	2	0.476954923300295	0.451033459149881	0.499345917667465	0
-Unsure	Olfactory lamina propria derived stem cells, donor 2	Olfactory lamina propria derived stem cells	GSM606420	2	0.49171315367664	0.465955645294205	0.515455073080384	0
-Unsure	Olfactory lamina propria derived stem cells, donor 3	Olfactory lamina propria derived stem cells	GSM606421	1	0.514025040508404	0.49276077376909	0.539465983316535	0
-MSC	BM MSC, donor 4	BM MSC	GSM606422	1	0.666903763826221	0.63295206585103	0.696020106755489	0
-MSC	BM MSC, donor 5	BM MSC	GSM606423	1	0.861550628505825	0.832708285123198	0.882399978708228	0
-MSC	BM MSC, donor 6	BM MSC	GSM606424	1	0.821216307729184	0.795615924691369	0.84278589254699	0
-MSC	BM MSC, donor 7	BM MSC	GSM606425	1	0.778108924867916	0.736648787604726	0.802826503619801	0
-MSC	BM MSC, donor 8	BM MSC	GSM606426	1	0.771576319821731	0.744045563903394	0.794724316563048	0
-MSC	BM MSC, donor 9	BM MSC	GSM606427	1	0.692742221764612	0.66579376544358	0.714273947083702	0
+total_samples	MSC_Call	MSC_Type	Replicate_Group_ID	Sample_Type	chip_id	classification	prediction	lwr	upr	missing_signature_genes
+200	126	MSC	BM MSC, donor 1	BM MSC	GSM250019	1	0.6008568272	0.5721704574	0.6339365135	0
+200	41	Non-MSC	BM MSC, donor 2	BM MSC	GSM250020	2	0.1953958583	0.1340766893	0.25571102	0
+200	129	MSC	BM MSC, donor 3	BM MSC	GSM250021	1	0.6154597539	0.5855621437	0.6489175336	0
+200	1	Non-MSC	BM erythropoietic cells CD235A+, donor 1	BM erythropoietic cells CD235A+	GSM250022	2	0.0024744241	-0.0279071868	0.0228126666	0
+200	0	Non-MSC	BM erythropoietic cells CD235A+, donor 2	BM erythropoietic cells CD235A+	GSM250023	2	-0.0272159124	-0.0528487662	-0.0082489669	0
+200	0	Non-MSC	BM erythropoietic cells CD235A+, donor 3	BM erythropoietic cells CD235A+	GSM250024	2	-0.1737046326	-0.2093542111	-0.1441576684	0
+200	0	Non-MSC	BM granulopoietic cells CD11B+, donor 1	BM granulopoietic cells CD11B+	GSM250025	2	0.0552913515	0.0204344703	0.097217728	0
+200	0	Non-MSC	BM granulopoietic cells CD11B+, donor 2	BM granulopoietic cells CD11B+	GSM250026	2	-0.0096433332	-0.0393256001	0.0235368317	0
+200	0	Non-MSC	BM granulopoietic cells CD11B+, donor 3	BM granulopoietic cells CD11B+	GSM250027	2	0.0038921413	-0.0411861481	0.0507806546	0
+200	0	Non-MSC	BM hematopoietic cells CD45+, donor 1	BM hematopoietic cells CD45+	GSM250028	2	-0.0595867291	-0.0922188551	-0.0263467935	0
+200	0	Non-MSC	BM hematopoietic cells CD45+, donor 2	BM hematopoietic cells CD45+	GSM250029	2	-0.0279546395	-0.0509223658	0.0005619923	0
+200	0	Non-MSC	BM hematopoietic cells CD45+, donor 3	BM hematopoietic cells CD45+	GSM250030	2	-0.0592949997	-0.0865139917	-0.0301197017	0
+200	0	Non-MSC	Developing cortex derived neural progenitor cells, replicate 1	Developing cortex neural progenitor cells	GSM335938	2	-0.5574500603	-0.60958922	-0.5198609866	0
+200	0	Non-MSC	Ventral midbrain derived neural progenitor cells, replicate 1	Ventral midbrain neural progenitor cells	GSM335940	2	-0.6141538883	-0.6706943761	-0.5770106049	0
+200	0	Non-MSC	Developing cortex derived neural progenitor cells, replicate 2	Developing cortex neural progenitor cells	GSM335941	2	-0.4928984632	-0.5487287176	-0.4544911566	0
+200	0	Non-MSC	Ventral midbrain derived neural progenitor cells, replicate 2	Ventral midbrain neural progenitor cells	GSM335942	2	-0.5918834873	-0.6493699879	-0.5506379497	0
+200	100	Unsure	Olfactory lamina propria derived stem cells, donor 1	Olfactory lamina propria derived stem cells	GSM606419	2	0.4769549233	0.4510334591	0.4993459177	0
+200	103	Unsure	Olfactory lamina propria derived stem cells, donor 2	Olfactory lamina propria derived stem cells	GSM606420	2	0.4917131537	0.4659556453	0.5154550731	0
+200	107	Unsure	Olfactory lamina propria derived stem cells, donor 3	Olfactory lamina propria derived stem cells	GSM606421	1	0.5140250405	0.4927607738	0.5394659833	0
+200	140	MSC	BM MSC, donor 4	BM MSC	GSM606422	1	0.6669037638	0.6329520659	0.6960201068	0
+200	181	MSC	BM MSC, donor 5	BM MSC	GSM606423	1	0.8615506285	0.8327082851	0.8823999787	0
+200	172	MSC	BM MSC, donor 6	BM MSC	GSM606424	1	0.8212163077	0.7956159247	0.8427858925	0
+200	163	MSC	BM MSC, donor 7	BM MSC	GSM606425	1	0.7781089249	0.7366487876	0.8028265036	0
+200	162	MSC	BM MSC, donor 8	BM MSC	GSM606426	1	0.7715763198	0.7440455639	0.7947243166	0
+200	145	MSC	BM MSC, donor 9	BM MSC	GSM606427	1	0.6927422218	0.6657937654	0.7142739471	0
