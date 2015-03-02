@@ -743,8 +743,8 @@ module.exports = biojsvisrohartmsctest = function(init_options)
             })
             .style("fill", 
                 function (d){
-                    temp = d.MSC_Type;
-                    color = heatmapColour(d.MSC_call);
+                    temp = d.MSC_Call;
+                    color = heatmapColour(temp);
                     return color;
                 }
             ) 
