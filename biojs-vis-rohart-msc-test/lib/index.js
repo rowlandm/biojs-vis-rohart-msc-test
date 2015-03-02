@@ -717,13 +717,19 @@ module.exports = biojsvisrohartmsctest = function(init_options)
         // pick any number [3-9] for Reds
         // pick any number [3-11] for RdGy
         // you can check the number you can use here: https://github.com/mbostock/d3/blob/master/lib/colorbrewer/colorbrewer.js
+
+
+
+
+        // Or we can use something we make up
+        // http://synthesis.sbecker.net/articles/2012/07/16/learning-d3-part-6-scales-colors
         var numColors = 9;
 
-        var heatmapColour = d3.scale.quantize()
-            .domain([0,200]) 
+        var heatmapColour = d3.scale.linear()
+            .domain([0,100,200]) 
             // this is the range for the Reds colorbrewer, bu there is also RdGy etc.
             // you can see them all here: https://github.com/mbostock/d3/blob/master/lib/colorbrewer/colorbrewer.js
-            .range(colorbrewer.Reds[numColors]);
+            .range(["green","pink","red"]);
             //.range(colorbrewer.RdGy[numColors]);
             //.range(colorbrewer.RdPu[numColors]);
             
@@ -1039,7 +1045,7 @@ module.exports = biojsvisrohartmsctest = function(init_options)
 
         graph = this.preprocess_lines(graph);
         graph = this.setup_graph(graph);
-        //graph = this.setup_legend(graph);
+        graph = this.setup_legend(graph);
 
         var target = $(options.target);
         target.addClass('rohart_msc_graph');
