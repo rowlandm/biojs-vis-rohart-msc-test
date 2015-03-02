@@ -725,7 +725,7 @@ module.exports = biojsvisrohartmsctest = function(init_options)
         // http://synthesis.sbecker.net/articles/2012/07/16/learning-d3-part-6-scales-colors
         var numColors = 9;
 
-        var heatmapColour = d3.scale.linear()
+        var heat_map_colour = d3.scale.linear()
             .domain([0,200]) 
             .range(["pink","red"]);
             
@@ -751,7 +751,7 @@ module.exports = biojsvisrohartmsctest = function(init_options)
             .style("fill", 
                 function (d){
                     temp = d.MSC_Call;
-                    color = heatmapColour(temp);
+                    color = heat_map_colour(temp);
                     return color;
                 }
             ) 
@@ -759,6 +759,7 @@ module.exports = biojsvisrohartmsctest = function(init_options)
             .on('mouseout', tooltip.hide);
 
 
+        graph.heat_map_colour = heat_map_colour;
         graph.svg = svg;
         return graph;
     }    // end of this.setup_scatter
@@ -788,11 +789,11 @@ module.exports = biojsvisrohartmsctest = function(init_options)
         svg = graph.svg;
         options = graph.options;
         page_options = graph.page_options;
+        heat_map_colour = graph.heat_map_colour;
+        //graph = this.convert_domain_colors_to_d3(graph);
 
-        graph = this.convert_domain_colors_to_d3(graph);
-
-        domains_d3 = graph.options.domains_d3;
-        colors_d3 = graph.options.colors_d3;
+        //domains_d3 = graph.options.domains_d3;
+        //colors_d3 = graph.options.colors_d3;
 
         /*
             http://chimera.labs.oreilly.com/books/1230000000345/ch08.html#_cleaning_it_up
@@ -812,9 +813,13 @@ module.exports = biojsvisrohartmsctest = function(init_options)
             Translation transforms are specified with the easy syntax of translate(x,y), where x and y are, 
             obviously, the number of horizontal and vertical pixels by which to translate the element.
         */
+
+        legend_values=[200,150,100,50,0];
+
+
         legend_x_axis = page_options.width + 60;
         var legend = svg.selectAll("."+options.legend_class)
-            .data(domains_d3)
+            .data(legend_values)
             .enter().append("g")
             .attr("class", options.legend_class)
             .attr("transform", 
@@ -828,7 +833,12 @@ module.exports = biojsvisrohartmsctest = function(init_options)
             .attr("x", page_options.width - 18)
             .attr("width", 18)
             .attr("height", 18)
-            .style("fill", colors_d3);
+            .style("fill", 
+                function(d){
+                    colour = heat_map_colour(d);
+                    return colour;
+                }
+            );
 
         legend.append("text")
             .attr("x", page_options.width - 24)
