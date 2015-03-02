@@ -720,7 +720,10 @@ module.exports = biojsvisrohartmsctest = function(init_options)
 
         var heatmapColour = d3.scale.quantize()
           .domain([0,200])
-          .range(colorbrewer.Reds[numColors]);// this is the range for the reds color brewer
+            // this is the range for the Reds colorbrewer, bu there is also RdGy etc.
+            // you can see them all here: https://github.com/mbostock/d3/blob/master/lib/colorbrewer/colorbrewer.js
+          .range(colorbrewer.Reds[numColors]);
+          .range(colorbrewer.Reds[numColors]);
 
 
         svg.selectAll(".dot") // class of .dot
