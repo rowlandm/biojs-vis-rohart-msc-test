@@ -3,6 +3,7 @@ var app = require("biojs-vis-rohart-msc-test");
 
     // have to set this up here so that the tooltip can use these values
     var horizontal_lines = {'lwr':0.4337,'upr':0.5169};
+    var legend_values=[200,150,100,50,0];
 
     // this tooltip function is passed into the graph via the tooltip
     var tooltip = d3.tip()
@@ -48,11 +49,13 @@ var app = require("biojs-vis-rohart-msc-test");
             title: title,
             subtitle: subtitle,
             unique_id: "chip_id",
-            domain_colors : {'MSC':'grey','Non-MSC':'grey','Unsure':'grey'},
             margin:{top: 180, right: 120, bottom: 530, left: 200},
             horizontal_lines: horizontal_lines,  // this gets turned into an array of objects
             horizontal_line_value_column: 'value',
             show_horizontal_line_labels: true,
+            domain_colours : ["pink","red"],
+            legend_range: [0,200],
+            legend_values: legend_values,
             legend_class: "legend",
             sample_type_order: "BM MSC,BM erythropoietic cells CD235A+,BM granulopoietic cells CD11B+,BM hematopoietic cells CD45+,Developing cortex neural progenitor cells,Ventral midbrain neural progenitor cells,Olfactory lamina propria derived stem cells",
             height: 1020,

@@ -711,23 +711,20 @@ module.exports = biojsvisrohartmsctest = function(init_options)
         svg.call(tooltip);
 
 
-        // Trying to make a quantative scale using an old way - ended up not using this
+        // Trying to make a quantative scale using an old way - ended up not using this anymore
         // https://github.com/mbostock/d3/wiki/Quantitative-Scales#quantize
         // http://stackoverflow.com/questions/17671252/d3-create-a-continous-color-scale-with-many-strings-inputs-for-the-range-and-dy
         // pick any number [3-9] for Reds
         // pick any number [3-11] for RdGy
         // you can check the number you can use here: https://github.com/mbostock/d3/blob/master/lib/colorbrewer/colorbrewer.js
-
-
+        // end of not using this anymore
 
 
         // Or we can use something we make up
         // http://synthesis.sbecker.net/articles/2012/07/16/learning-d3-part-6-scales-colors
-        var numColors = 9;
-
         var heat_map_colour = d3.scale.linear()
-            .domain([0,200]) 
-            .range(["pink","red"]);
+            .domain(options.legend_range) 
+            .range(options.domain_colours);
             
 
         svg.selectAll(".dot") // class of .dot
@@ -764,37 +761,11 @@ module.exports = biojsvisrohartmsctest = function(init_options)
         return graph;
     }    // end of this.setup_scatter
 
-    this.convert_domain_colors_to_d3 = function(graph){
-
-        domain_colors = graph.options.domain_colors;
-        domain_colors_d3 = Array();
-        domains_d3 = Array();
-        // from  domain_colors : {'MSC':'red','Non-MSC':'blue','Unsure':'grey'},
-        // separate into ['MSC','Non-MSC','Unsure'] and
-        // ['blue','green','grey'] respective colors. 
-        for (key in domain_colors){
-            color = domain_colors[key];
-            domains_d3.push(key); 
-            domain_colors_d3.push(color); 
-        }
-
-        graph.options.domains_d3 = domains_d3 ;
-
-        graph.options.colors_d3 = d3.scale.ordinal().domain(domains_d3).range(domain_colors_d3);
-
-        return graph;
-    } // convert_domain_colors_to_d3
-
     this.setup_legend = function(graph){
         svg = graph.svg;
         options = graph.options;
         page_options = graph.page_options;
         heat_map_colour = graph.heat_map_colour;
-        //graph = this.convert_domain_colors_to_d3(graph);
-
-        //domains_d3 = graph.options.domains_d3;
-        //colors_d3 = graph.options.colors_d3;
-
         /*
             http://chimera.labs.oreilly.com/books/1230000000345/ch08.html#_cleaning_it_up
             Scott Murray has a great explanation. For instance, for the code snippet:
@@ -814,8 +785,7 @@ module.exports = biojsvisrohartmsctest = function(init_options)
             obviously, the number of horizontal and vertical pixels by which to translate the element.
         */
 
-        legend_values=[200,150,100,50,0];
-
+        legend_values=options.legend_values;
 
         legend_x_axis = page_options.width + 60;
         var legend = svg.selectAll("."+options.legend_class)
