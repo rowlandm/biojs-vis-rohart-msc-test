@@ -1,12 +1,16 @@
 // if you don't specify a html file, the sniper will generate a div with id "rootDiv"
 var app = require("biojs-vis-rohart-msc-test");
+function round_to_two_decimal_places(num){
+    new_num = Math.round(num * 100) / 100;
+    return new_num;
+}
 
     // have to set this up here so that the tooltip can use these values
     var horizontal_lines = {'lwr':0.4337,'upr':0.5169};
     var legend_values=[200,150,100,50,0];
 
     // this tooltip function is passed into the graph via the tooltip
-    var tooltip = d3.tip()
+   var tooltip = d3.tip()
       .attr('class', 'd3-tip')
       .offset([-10, +110])
       .html(function(d) {
@@ -16,7 +20,13 @@ var app = require("biojs-vis-rohart-msc-test");
         // MSC 100/100
         total = d.total_subsamplings;
         msc_call = d.MSC_calls; 
-        temp = "Sample: " + d.Replicate_Group_ID +"("+d.chip_id+")<br/>MSC "+msc_call+"/"+total+"<br/>Prediction value: " + d[y_column] + "<br/>lwr: " + d.lwr + "<br/>upr: " + d.upr;
+        prediction = round_to_two_decimal_places(d[y_column]);
+        lwr = round_to_two_decimal_places(d.lwr);
+        upr = round_to_two_decimal_places(d.upr);
+        temp = 
+            "Sample: " + d.Replicate_Group_ID +"<br/>"+
+            "Rohart Score [CI]: " + prediction + " [" + lwr + ";" + upr +"]<br/>"+
+            "MSC predicted "+msc_call+"/"+total+" iterations<br/>"
         return temp; 
       });
 
