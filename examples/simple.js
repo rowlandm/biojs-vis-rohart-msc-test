@@ -7,7 +7,7 @@ function round_to_two_decimal_places(num){
 
     // have to set this up here so that the tooltip can use these values
     var horizontal_lines = {'lwr':0.4337,'upr':0.5169};
-    var legend_values=[200,150,100,50,0];
+    var legend_values=[100,50,0];
 
     // this tooltip function is passed into the graph via the tooltip
    var tooltip = d3.tip()
@@ -64,9 +64,9 @@ function round_to_two_decimal_places(num){
             horizontal_line_value_column: 'value',
             show_horizontal_line_labels: true,
             domain_colours : ["pink","red"],
-            legend_range: [0,200],
+            legend_range: [0,100],
             legend_values: legend_values,
-            data_column_for_colour: "MSC_calls", //d.MSC_calls
+            data_columns_for_colour: ["MSC_calls","total_subsamplings"], //d.MSC_calls
             legend_class: "legend",
             sample_type_order: "BM MSC,BM erythropoietic cells CD235A+,BM granulopoietic cells CD11B+,BM hematopoietic cells CD45+,Developing cortex neural progenitor cells,Ventral midbrain neural progenitor cells,Olfactory lamina propria derived stem cells",
             height: 1020,
