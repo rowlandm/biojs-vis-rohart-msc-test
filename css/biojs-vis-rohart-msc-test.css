@@ -13,3 +13,17 @@ border: 1px solid #000;
 word-wrap: break-word;
 opacity: 100;
 }
+
+*.x_axis path,
+*.x_axis line,
+*.y_axis path,
+*.y_axis line
+{
+    fill:none; 
+    stroke:black;
+    stroke-width:1px;
+}
+
+g.x_axis g.tick line {
+    opacity: 0;
+}
