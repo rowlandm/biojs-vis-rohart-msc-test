@@ -64,7 +64,7 @@ function round_to_two_decimal_places(num){
             horizontal_lines: horizontal_lines,  // this gets turned into an array of objects
             horizontal_line_value_column: 'value',
             show_horizontal_line_labels: true,
-            domain_colours : ["blue","red"],
+            domain_colours : ["#FFFFFF","#7f3f98"],
             background_colour: "white",
             legend_range: [0,100],
             data_columns_for_colour: ["MSC_calls","total_subsamplings"], //d.MSC_calls
