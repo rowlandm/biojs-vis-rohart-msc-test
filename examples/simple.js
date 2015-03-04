@@ -43,7 +43,8 @@ function round_to_two_decimal_places(num){
         });
 
         title = "Rohart MSC Score for Dataset XYZ";
-        subtitle = "Subtitle"
+        subtitle1 = "Subtitle"
+        subtitle2 = "Subtitle"
         target = rootDiv;
 
         // can always use just a straight value, but it's nicer when you calculate
@@ -56,13 +57,14 @@ function round_to_two_decimal_places(num){
         var options = {
             target: target,
             title: title,
-            subtitle: subtitle,
+            subtitle1: subtitle1,
+            subtitle2: subtitle2,
             unique_id: "chip_id",
             margin:{top: 180, right: 120, bottom: 530, left: 200},
             horizontal_lines: horizontal_lines,  // this gets turned into an array of objects
             horizontal_line_value_column: 'value',
             show_horizontal_line_labels: true,
-            domain_colours : ["pink","red"],
+            domain_colours : ["blue","red"],
             background_colour: "white",
             legend_range: [0,100],
             data_columns_for_colour: ["MSC_calls","total_subsamplings"], //d.MSC_calls
