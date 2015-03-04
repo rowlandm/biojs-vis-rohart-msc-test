@@ -63,12 +63,15 @@ function round_to_two_decimal_places(num){
             horizontal_line_value_column: 'value',
             show_horizontal_line_labels: true,
             domain_colours : ["pink","red"],
+            background_colour: "white",
             legend_range: [0,100],
             data_columns_for_colour: ["MSC_calls","total_subsamplings"], //d.MSC_calls
             legend_class: "legend",
             sample_type_order: "BM MSC,BM erythropoietic cells CD235A+,BM granulopoietic cells CD11B+,BM hematopoietic cells CD45+,Developing cortex neural progenitor cells,Ventral midbrain neural progenitor cells,Olfactory lamina propria derived stem cells",
             height: 1020,
             error_bar_width:10, 
+            background_stroke_width:  "1px",
+            background_stroke_colour:  "black",
             x_axis_text_angle:-45, 
             width:width, // suggest 50 per sample
             x_column:'Replicate_Group_ID',
