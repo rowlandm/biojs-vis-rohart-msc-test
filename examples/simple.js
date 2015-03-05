@@ -72,6 +72,7 @@ function round_to_two_decimal_places(num){
             sample_type_order: "BM MSC,BM erythropoietic cells CD235A+,BM granulopoietic cells CD11B+,BM hematopoietic cells CD45+,Developing cortex neural progenitor cells,Ventral midbrain neural progenitor cells,Olfactory lamina propria derived stem cells",
             height: 1020,
             circle_radius:5,  // for the scatter points
+            x_middle_title: 325,
             error_bar_width:10, 
             background_stroke_width:  "1px",
             background_stroke_colour:  "black",
