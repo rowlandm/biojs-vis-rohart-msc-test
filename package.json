@@ -1,7 +1,7 @@
 {
   "name": "biojs-vis-rohart-msc-test",
   "description": "BioJS component to provide a graph of the Rohart MSC Test hosted in Stemformatics",
-  "version": "1.0",
+  "version": "0.4.0",
   "homepage": "https://github.com/rowlandm/biojs-vis-rohart-msc-test",
   "author": {
     "name": "rowlandm",

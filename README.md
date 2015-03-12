@@ -55,7 +55,7 @@ var instance = new app(options);
 #### Running the instance for developing
 
 Note: If you are running Ubuntu LTS 12.04 or 14.04 you will be behind in npm. To fix this, do the following:
-```command line
+```
 sudo apt-get purge nodejs npm
 
 curl -sL https://deb.nodesource.com/setup | sudo bash -
@@ -70,7 +70,7 @@ Once you have downloaded the code, you will need to ensure that you create a bui
 
 You can simply run the following command in the directory to see a website appear on [localhost:9090](http://localhost:9090)
 
-```command line
+```
 npm run w
 ```
 
