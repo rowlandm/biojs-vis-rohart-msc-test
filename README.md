@@ -52,7 +52,7 @@ var instance = new app(options);
 
 ## Documentation
 
-#### Running the instance
+#### Running the instance for developing
 
 Note: If you are running Ubuntu LTS 12.04 or 14.04 you will be behind in npm. To fix this, do the following:
 ```command line
