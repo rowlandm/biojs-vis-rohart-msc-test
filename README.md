@@ -7,12 +7,12 @@
 ## Getting Started
 Install the module with: `npm install biojs-vis-rohart-msc-test`
 
+for more details of the options, see the working example [here](https://github.com/rowlandm/biojs-vis-rohart-msc-test/blob/master/examples/simple.js)
+
+
 ```javascript
 var test = require('biojs-vis-rohart-msc-test');
 
-
-// for more details of the options, see the example here:
-// https://github.com/rowlandm/biojs-vis-rohart-msc-test/blob/master/examples/simple.js
 
 var options = {
     background_colour: "white",
