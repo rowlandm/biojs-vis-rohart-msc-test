@@ -7,12 +7,11 @@
 ## Getting Started
 Install the module with: `npm install biojs-vis-rohart-msc-test`
 
-for more details of the options, see the working example [here](https://github.com/rowlandm/biojs-vis-rohart-msc-test/blob/master/examples/simple.js)
+for more details of the options, see the working example [here](http://biojs.io/d/biojs-vis-rohart-msc-test)  and the example code [here](https://github.com/rowlandm/biojs-vis-rohart-msc-test/blob/master/examples/simple.js)
 
 
 ```javascript
-var test = require('biojs-vis-rohart-msc-test');
-
+var app = require('biojs-vis-rohart-msc-test');
 
 var options = {
     background_colour: "white",
@@ -47,7 +46,6 @@ var options = {
     y_axis_title: "Rohart Score",
     y_column:'prediction' // d.prediction
 }
-
 
 var instance = new app(options);
 ```
