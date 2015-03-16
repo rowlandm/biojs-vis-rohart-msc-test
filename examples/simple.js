@@ -90,5 +90,17 @@ d3.tsv(data_url,function (error,data){
 
     var instance = new app(options);
 
+    // Get the d3js SVG element
+    var tmp = document.getElementById(rootDiv.id);
+    var svg = tmp.getElementsByTagName("svg")[0];
+    // Extract the data as SVG text string
+    var svg_xml = (new XMLSerializer).serializeToString(svg);
+
+/*
+    var form = document.getElementById("svgform");
+    form['output_format'].value = output_format;
+    form['data'].value = svg_xml ;
+    form.submit();
+*/
 }); 
 
